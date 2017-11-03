@@ -1,0 +1,6 @@
+jobs:
+  main:
+    image: node:6
+    requires: [~pr, ~commit, ~sd@378:main]
+    steps:
+      - echo: echo "in trigger-2"
