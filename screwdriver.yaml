@@ -5,4 +5,8 @@ jobs:
     steps:
       - echo: echo "in trigger-2"
       - touch: touch $SD_ARTIFACTS_DIR/test
-      - fail: booo
+  fail:
+    image: node:6
+    requires: [main]
+    steps:
+      - fail: fail_me
